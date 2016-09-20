@@ -1,0 +1,125 @@
+<HTML>
+<head>
+<meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+<script src="semantic/dist/semantic.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<style>
+#home{
+	height:20%;
+	background: red;
+	width:100%;
+}
+#experience{
+	height : 40%;
+	background: white;
+}
+#contact{
+	height: 30%;
+	background: blue;
+}
+#resume{
+	height:10%;
+	background:black;
+}
+#resButton{
+	position:relative;
+	padding-right:40px;
+	padding-left:40px;
+	padding-top:20px;
+	padding-bottom:20px;
+	top : 50%;
+	left : 45%;
+}
+.centerText{
+	
+	position: relative;
+	padding:0;
+	top:40%;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size: 2em;
+	font: sans-serif;
+	text-align:center;
+
+}
+
+
+html,body{
+	height:175%;
+
+
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <a class="item" href = #home>
+      <i class="home icon"></i> Home
+    </a>
+           <a class="item" href = #experience>
+      <i class="book icon" tabindex = 0></i> Experience
+    </a>
+        <a class="item" href = #contact>
+      <i class="mail icon" tabindex = 0></i> Contact Me
+    </a>
+ 
+            <a class="item" href = "#resume">
+      <i class="file text icon" tabindex = 0></i> Resume
+    </a>
+    </div>
+    </div>
+<div id="home"><a href="home"></a>
+	<div class= "centerText">
+		<h1>Sam Saltwick</h1>
+		<p>University of Maryland , College Park
+		<br><br>
+		Class of 2020
+		<br><br>
+		Computer Engineering Major
+		</p>
+	</div>
+
+</div>
+<div id="experience"><a href="experience"></a>Experience</div>
+<div id="contact"><a href="contact"></a>Contact</div>
+<div id="resume"><a href= "resume"></a>
+	<a class = "ui inverted blue button" id= "resButton" href = "res/Resume.pdf">View Resume</a>
+
+</div>
+
+</body>
+
+
+
+</HTML
